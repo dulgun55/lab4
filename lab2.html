@@ -388,6 +388,15 @@
         setStatus("Эхлээд Tap object A хийж зураг гаргана уу.");
         return;
       }
+
+      if (imageVisible) {
+        imageVisible = false;
+        imageOverlay.style.display = "none";
+        infoText.textContent = "Info board: Tap hiisnii daraa medeelel garna.";
+        setStatus("Зураг нуух үйлдэл хийгдлээ.");
+        return;
+      }
+
       imageVisible = true;
       imageInfoStep = 0;
       imageSrcStep = 0;

@@ -86,13 +86,17 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
       box-sizing: border-box;
       display: none;
+      justify-content: center;
+      align-items: center;
     }
 
     #overlayImage {
-      width: 100%;
+      width: min(260px, 72vw);
+      aspect-ratio: 16 / 9;
       display: block;
       border-radius: 8px;
       cursor: pointer;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -387,7 +391,7 @@
       imageVisible = true;
       imageInfoStep = 0;
       imageSrcStep = 0;
-      imageOverlay.style.display = "block";
+      imageOverlay.style.display = "flex";
       overlayImage.setAttribute("src", "assets/ekoc.jpeg");
       infoText.textContent = "Зураг гарлаа. Зураг дээр дарж мэдээллийг солино.";
       setStatus("Зураг гарлаа. Дээр нь дарж Feature мэдээллүүдийг ээлжлэн хараарай.");
